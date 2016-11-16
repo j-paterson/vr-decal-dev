@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get '/cart' => 'cart#index'
+
   devise_for :users
   resources :items
   get 'items/new', to: 'items#new'
