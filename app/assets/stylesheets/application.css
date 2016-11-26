@@ -31,11 +31,14 @@ list-style: none;
 }
 .nav-wrapper a{
 	color:white;
+	
 }
 .nav-wrapper li a:hover {
   color: #06b1e1;
+  text-decoration:none
 }
-.logo{
+.logo img{
+	width:15%;
 }
 .mobile-menu{
 	
