@@ -13,9 +13,16 @@
  *= require_tree .
  *= require_self
  */
+
+/* General */
 ul{
 list-style: none;
 }
+.container{
+	padding:10px;
+}
+
+/* Navigation */
 .nav-wrapper{
 	width:100%;
 	height:48px;
@@ -34,18 +41,75 @@ list-style: none;
 	
 }
 .nav-wrapper li a:hover {
-  color: #06b1e1;
-  text-decoration:none
+	color: #06b1e1;
+	text-decoration:none
 }
 .logo img{
-	width:15%;
-}
-.mobile-menu{
-	
-}
-.nonmobile-menu{
+	width:3em;
 }
 .main-menu{
 	float:right;
 }
-.main-menu
+
+/* Item Display */
+
+.item{
+	margin:10px;
+	padding:10px;
+	background-color:gray;
+}
+.item-title{
+	font-weight:600;
+}
+.addButton {
+	background-color:#2dabf9;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:9px 23px;
+	text-decoration:none;
+	margin: 10px 10px 0 10px;
+}
+.addButton:hover {
+	background-color:#2994d6;
+}
+.addButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Profile Display */
+
+.profileContainer ul{
+	list-style: none;
+}
+.profileContainer li{
+	text-decoration:none
+}
+
+/*  Category Display  */
+
+.box{
+	background-color:#bababa;
+    padding:10%;
+    text-align:center;
+    font-size:2em;
+    font-weight:600;
+    margin:2%;
+}
+.categoryRow a{
+	color:white;
+}
+
+
+
+
+
+
+
+
+
+
+

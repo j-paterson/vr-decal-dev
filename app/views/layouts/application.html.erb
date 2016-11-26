@@ -8,25 +8,14 @@
 	  <%= csrf_meta_tags %>
 	</head>
 	<body>
-		<header class="nav-wrapper">
-			<div class="logo md col-xs-4 col-sm-4 col-md-4">
-				<img src="cart.svg"><img>
-			</div>
-			<div class="mobile-menu"></div>
-			<div class="nonmobile-menu col-sm-8 col-md-8">
-				<ul class="main-menu">
-					<% if user_signed_in? %>
-						<li><%= link_to "Home", '/items' %></li>
-						<li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-					<% else %>
-						<li><%= link_to "Home", '/items' %></li>
-						<li><%= link_to "Sign In", new_user_session_path, :method => :get %></li>
-						<li><%= link_to "Sign up", new_user_registration_path, :method => :get %></li>
-					<% end %>
-				</ul>
-			</div>
-		</header>
-
-		<%= yield %>
+		<%= render 'layouts/header' %>
+		<div class="container">
+			<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+			<% end %>
+			<%= yield %>
+			<!-- <%= debug(params) if Rails.env.development? %> -->
+	    </div>
+	    <%= render 'layouts/footer' %>
 	</body>
 </html>

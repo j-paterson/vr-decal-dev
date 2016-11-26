@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
   get '/cart' => 'cart#index'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' }
   resources :items
+  resources :users
+  resources :categories
+  resources :subcategories
   get 'items/new', to: 'items#new'
   post 'items/create', to: 'items#create'
   patch 'new', to: 'items#new'
   patch 'delete', to: 'items#delete'
+  get 'profile', to: 'users#profile', as: 'profile'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root :to =>'home#index'
