@@ -13,3 +13,36 @@
  *= require_tree .
  *= require_self
  */
+ul{
+list-style: none;
+}
+.nav-wrapper{
+	width:100%;
+	height:48px;
+	background-color:gray;
+}
+.nav-wrapper li{
+	padding-left: 10px;
+	padding-right: 10px;
+	position:relative;
+	float:left;
+	font-weight:600;
+	height: inherit;
+}
+.nav-wrapper a{
+	color:white;
+}
+.nav-wrapper li a:hover {
+  color: #06b1e1;
+}
+.logo{
+}
+.mobile-menu{
+	
+}
+.nonmobile-menu{
+}
+.main-menu{
+	float:right;
+}
+.main-menu
