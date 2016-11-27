@@ -91,9 +91,10 @@ list-style: none;
 
 /*  Category Display  */
 
-.box{
+.categoryRow .box{
 	background-color:#bababa;
-    padding:10%;
+    padding:10% 0 10% 0;
+    width:25%;
     text-align:center;
     font-size:2em;
     font-weight:600;
@@ -103,6 +104,19 @@ list-style: none;
 	color:white;
 }
 
+/* Subcategory Display */
+.subCategoryRow .box{
+	background-color:#bababa;
+    padding:8% 0 8% 0;
+    text-align:center;
+    font-size:2em;
+    font-weight:600;
+    margin:1%;
+    width:20%;
+}
+.subCategoryRow a{
+	color:white;
+}
 
 
 

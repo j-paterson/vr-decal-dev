@@ -1,0 +1,15 @@
+<%= link_to "All", '/' %> > <%= link_to @subcategory.category_id, '/' %> > <%= @subcategory.name %>
+
+<div class='container'>
+     <% Item.where(subcategory_id: @subcategory).in_groups_of(6, false).each do |group| %>
+          <div class="row subCategoryRow">
+            <% group.each do |item| %>
+               <%= link_to(item) do %>
+                   <div class="box col-md-2">
+                         <%= item.name %>
+                    </div>
+               <% end %>
+            <% end %>
+          </div>
+     <% end %>
+</div>
